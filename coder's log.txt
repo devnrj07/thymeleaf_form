@@ -1,0 +1,3 @@
+23/9/19 : Status : form is ready and modelAttributes are working. Data is getting transferred to the next page.
+          Issues : unable to align checkboxes and radio buttons, font, text size, basically it's ugly.
+          To-do : Fix form and add success page! then persist the data using some db.

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <title>Secured Zone</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <h1>Order Received!</h1>
+
+    <p th:text="'Here you go Bud!'" />    
+
+	<p th:text= "'Full Name: ' + ${orderform.fullName}" />
+	<p th:text= "'Address: ' + ${orderform.address}" />
+	<p th:text= "'DOB: ' + ${orderform.dateOfBirth}" />
+	<p th:text= "'Color preffered: ' + ${orderform.color}" />
+	<p th:text= "'Include Cap: ' + ${orderform.designType}" />
+	<p th:text= "'Design selection: ' + ${#strings.arrayJoin(orderform.multiCheckboxSelectedValues, ', ')}" />
+	<p th:text= "'Size: ' + ${orderform.radioButtonSelectedValue}" />
+	<p th:text= "'Payment mode: ' + ${orderform.dropdownSelectedValue}" />
+    <a href="/order">resubmit form</a>
+
+
+    <p><a href="/" th:href="@{/}">Back to home page</a></p>
+
+</div>
+</body>
+</html>
